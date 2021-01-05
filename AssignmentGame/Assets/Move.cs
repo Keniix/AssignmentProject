@@ -38,7 +38,7 @@ public class Move : MonoBehaviour
         if (isJumpPressed)
         {
             // the cube is going to move upwards in 50 units per second
-            rb.velocity = new Vector3(0, 50, 0);
+            rb.velocity = new Vector3(0, 400, 0);
             isMoving = true;
             Debug.Log("jump");
         }
@@ -47,7 +47,7 @@ public class Move : MonoBehaviour
         {
             // when the cube has moved for 50 seconds, report its position
             time = time + Time.fixedDeltaTime;
-            if (time > 50.0f)
+            if (time > 400.0f)
             {
                 Debug.Log(gameObject.transform.position.y + " : " + time);
                 time = 0.0f;
