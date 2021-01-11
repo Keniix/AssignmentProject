@@ -64,9 +64,12 @@ public class Move : MonoBehaviour
         {
             //teleport the player to 23.1f on the x axis
             transform.position = new Vector3(23.1f,transform.position.y,0);
-        }        
+        }  
 
-        
+        if(transform.position.y > 17f)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     //for smoother jump
