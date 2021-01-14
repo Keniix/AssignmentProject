@@ -26,6 +26,7 @@ public class Move : MonoBehaviour
         characterScale = transform.localScale;
         characterScaleX = characterScale.x;
     
+    
     }
 
     // Update is called once per frame
@@ -100,17 +101,15 @@ public class Move : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
-    
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 6f), ForceMode2D.Impulse);
         }
     }
 
-
+    void OnBecameInvisible()
+    {
+        if (gameObject.tag == "Character")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
-
-
-
-
-
-
-    
