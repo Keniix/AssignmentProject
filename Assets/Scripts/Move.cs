@@ -18,7 +18,6 @@ public class Move : MonoBehaviour
     float lockPos = 0;
 
     public float moveSpeed = 5f;
-    public GameObject gameObject;
     // Start is called before the first frame update
 
     void Start()

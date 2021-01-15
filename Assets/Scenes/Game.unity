@@ -3350,7 +3350,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   moveSpeed: 16
-  gameObject: {fileID: 0}
 --- !u!50 &1484302339
 Rigidbody2D:
   serializedVersion: 4
