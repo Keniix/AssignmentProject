@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 
@@ -17,6 +18,7 @@ public class Move : MonoBehaviour
     float lockPos = 0;
 
     public float moveSpeed = 5f;
+    public GameObject gameObject;
     // Start is called before the first frame update
 
     void Start()
@@ -33,8 +35,7 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
 
-{
-
+    {
         // Flip the Character:
         if (Input.GetAxis("Horizontal") > 0) 
         {
@@ -70,7 +71,7 @@ public class Move : MonoBehaviour
 
         if(transform.position.y > 13.5f)
         {
-            Destroy(this.gameObject);
+            SceneManager.LoadScene(0);
         }
     }
 
@@ -105,4 +106,14 @@ public class Move : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 6f), ForceMode2D.Impulse);
         }
     }
-}
+
+    void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.tag == "Collider")
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+
+
+}  
