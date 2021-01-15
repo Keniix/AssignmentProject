@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if game is playing pressign esc pauses it and if not it resumes.
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
@@ -41,7 +42,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void LoadSettings()
     {
-        SceneManager.LoadScene("settings");
+        SceneManager.LoadScene("Settings");
     }
 
     public void MainMenu()

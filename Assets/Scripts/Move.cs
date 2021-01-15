@@ -23,6 +23,7 @@ public class Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
+
         characterScale = transform.localScale;
         characterScaleX = characterScale.x;
     
@@ -78,7 +79,7 @@ public class Move : MonoBehaviour
     {
         if (isJumpPressed)
         {
-            // the cube is going to move upwards in 50 units per second
+            // the character is going to move upwards in 50 units per second
             rb.velocity = new Vector3(0, 50, 0);
             isMoving = true;
             Debug.Log("jump");
@@ -86,7 +87,7 @@ public class Move : MonoBehaviour
 
         if (isMoving)
         {
-            // when the cube has moved for 50 seconds, report its position
+            // when the character has moved for 50 seconds, report its position
             time = time + Time.fixedDeltaTime;
             if (time > 50.0f)
             {
@@ -102,14 +103,6 @@ public class Move : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 6f), ForceMode2D.Impulse);
-        }
-    }
-
-    void OnBecameInvisible()
-    {
-        if (gameObject.tag == "Character")
-        {
-            Destroy(gameObject);
         }
     }
 }
