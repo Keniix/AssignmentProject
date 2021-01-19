@@ -10,6 +10,7 @@ public class Move : MonoBehaviour
     private float time = 0.0f;
     private bool isMoving = false;
     private bool isJumpPressed = false;
+    public Animator anim;
 
     Vector3 characterScale;
     float characterScaleX;
@@ -27,7 +28,9 @@ public class Move : MonoBehaviour
 
         characterScale = transform.localScale;
         characterScaleX = characterScale.x;
-    
+        
+        //for animation 
+        anim = GetComponent <Animator>();
     
     }
 
@@ -71,6 +74,11 @@ public class Move : MonoBehaviour
         if(transform.position.y > 13.5f)
         {
             SceneManager.LoadScene(0);
+        }
+
+        if(Input.GetKeyDown("space"))
+        {
+            anim.Play("player jump");
         }
     }
 
