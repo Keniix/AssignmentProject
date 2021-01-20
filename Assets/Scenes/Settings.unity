@@ -431,8 +431,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 947200721}
   - {fileID: 1240836382}
+  - {fileID: 947200721}
   - {fileID: 665829565}
   - {fileID: 171365577}
   m_Father: {fileID: 0}
@@ -1017,7 +1017,7 @@ RectTransform:
   - {fileID: 1913672492}
   - {fileID: 2111038425}
   m_Father: {fileID: 143584753}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1573,7 +1573,7 @@ Transform:
   m_LocalScale: {x: 32.04365, y: 28.653032, z: 1.0719746}
   m_Children: []
   m_Father: {fileID: 143584753}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1240836383
 SpriteRenderer:

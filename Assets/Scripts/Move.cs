@@ -93,6 +93,7 @@ public class Move : MonoBehaviour
             Debug.Log("jump");
         }
 
+
         if (isMoving)
         {
             // when the character has moved for 50 seconds, report its position
@@ -118,9 +119,7 @@ public class Move : MonoBehaviour
     {
         if(other.tag == "Collider")
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
         }
     }
-
-
 }  

@@ -6,6 +6,8 @@ public class Platforms : MonoBehaviour
 {
 
     public float moveSpeed = 3f;
+    public float speedIncrement = 0.01f;
+    public float maximumSpeed = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,5 +26,12 @@ public class Platforms : MonoBehaviour
             //teleport the platform to - on the axis
             transform.position = new Vector3(transform.position.x, -67f,0);
         }
+
+        moveSpeed += speedIncrement;
+
+        if(moveSpeed >= maximumSpeed)
+        {
+            moveSpeed = maximumSpeed;
+        } 
     }
 }
