@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
+
+    public Text scoreText;
     //press play again and goes to start game
     public void PlayAgain()
     {
@@ -16,4 +18,10 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    // public void Setup(int score)
+    // {
+    //     gameObject.SetActive(true);
+    //     scoreText.text =score.ToString();
+    // }
 }

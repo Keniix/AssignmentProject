@@ -111,7 +111,7 @@ public class Move : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 6f), ForceMode2D.Impulse);
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 8f), ForceMode2D.Impulse);
         }
     }
 
