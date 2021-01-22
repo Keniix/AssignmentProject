@@ -11,6 +11,10 @@ public class Move : MonoBehaviour
     private bool isMoving = false;
     private bool isJumpPressed = false;
     public Animator anim;
+    [SerializeField]
+    private bool _isSpeedBoostActive = false;
+
+
 
     Vector3 characterScale;
     float characterScaleX;
@@ -19,6 +23,8 @@ public class Move : MonoBehaviour
     float lockPos = 0;
 
     public float moveSpeed = 5f;
+    [SerializeField]
+    public float _speedMultiplier = 2f;
     // Start is called before the first frame update
 
     void Start()
@@ -122,4 +128,20 @@ public class Move : MonoBehaviour
             SceneManager.LoadScene(3);
         }
     }
+
+    public void SpeedBoostActive()
+    {
+        _isSpeedBoostActive = true;
+        moveSpeed *= _speedMultiplier; 
+        StartCoroutine(SpeedBoostPowerDownRoutine());
+    }
+
+    IEnumerator SpeedBoostPowerDownRoutine()
+    {
+        yield return new WaitForSeconds(5f);
+        moveSpeed /= _speedMultiplier;
+        _isSpeedBoostActive = false;
+    }
+
+
 }  

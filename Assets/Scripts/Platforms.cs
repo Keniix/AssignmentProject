@@ -24,7 +24,7 @@ public class Platforms : MonoBehaviour
         if(transform.position.y > 14.7f)
         {
             //teleport the platform to - on the axis
-            transform.position = new Vector3(transform.position.x, -67f,0);
+            transform.position = new Vector3(transform.position.x, -97f,0);
         }
 
         moveSpeed += speedIncrement;
