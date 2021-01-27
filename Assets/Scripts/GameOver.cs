@@ -7,8 +7,10 @@ public class GameOver : MonoBehaviour
 {
 
     public Text scoreText;
+
     //press play again and goes to start game
     public void PlayAgain()
+    
     {
         SceneManager.LoadScene("Game");
     }
@@ -18,6 +20,7 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
 
     // public void Setup(int score)
     // {
