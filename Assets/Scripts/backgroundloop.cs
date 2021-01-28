@@ -19,7 +19,7 @@ public class backgroundloop : MonoBehaviour
         transform.Translate(Vector3.up * Time.deltaTime * moveSpeed, Space.World);
 
         //check if the platform went past  on y the axis
-        if(transform.position.y > 14.7f)
+        if(transform.position.y > 28.7f)
         {
             //teleport the platform to - on the axis
             transform.position = new Vector3(transform.position.x, -28f,0);
