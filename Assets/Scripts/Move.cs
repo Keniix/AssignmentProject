@@ -11,6 +11,7 @@ public class Move : MonoBehaviour
     private bool isMoving = false;
     private bool isJumpPressed = false;
     public Animator anim;
+    
     [SerializeField]
     private bool _isSpeedBoostActive = false;
 
