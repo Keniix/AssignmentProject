@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Powerup : MonoBehaviour
 {
+    private Move _character;
     // Start is called before the first frame update
 void OnTriggerEnter2D(Collider2D other)
     {
@@ -11,14 +12,14 @@ void OnTriggerEnter2D(Collider2D other)
         if(other.tag == "Character")
         {
             //create an instance of the player script
-            Move Character = other.GetComponent<Move>();
+            _character = other.GetComponent<Move>();
             //if player was found
-            if(Character!= null)
+            if(_character!= null)
             {
-		    Character.SpeedBoostActive();
+		        _character.SpeedBoostActive();
             }
         }
-    Destroy(this.gameObject);
+        Destroy(this.gameObject);
     }
 
 
