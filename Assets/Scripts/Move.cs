@@ -78,10 +78,6 @@ public class Move : MonoBehaviour
             transform.position = new Vector3(23.1f,transform.position.y,0);
         }  
 
-        if(transform.position.y > 13.5f)
-        {
-            SceneManager.LoadScene(0);
-        }
 
         if(Input.GetKeyDown("space"))
         {
