@@ -5,9 +5,12 @@ using UnityEngine;
 public class Powerup : MonoBehaviour
 {
     private Move _character;
+
+
     // Start is called before the first frame update
 void OnTriggerEnter2D(Collider2D other)
     {
+        
         //if the other object has a tag of player
         if(other.tag == "Character")
         {
