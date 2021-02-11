@@ -29,17 +29,17 @@ public class enemymove : MonoBehaviour
         }
 
         //check if the player went past 23.1f on x the axis
-        if(transform.position.x > 23.1f)
+        if(transform.position.x > 9f)
         {
             //teleport the player to -23.1f on the axis
-            transform.position = new Vector3(-23.1f,transform.position.y,0);
+            transform.position = new Vector3(-9f,transform.position.y,0);
         }
 
         //check if player went past -23.1f on the x axis
-        else if (transform.position.x < -23.1f)
+        else if (transform.position.x < -9f)
         {
             //teleport the player to 23.1f on the x axis
-            transform.position = new Vector3(23.1f,transform.position.y,0);
+            transform.position = new Vector3(9f,transform.position.y,0);
         } 
     }
 }

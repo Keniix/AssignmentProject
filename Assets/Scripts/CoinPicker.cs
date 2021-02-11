@@ -13,7 +13,24 @@ public class CoinPicker : MonoBehaviour
     {
         if(other.transform.tag == "Coin")
         {
+            points.coinAmount += 4;
             Destroy(other.gameObject);
+        }
+
+        else if(other.transform.tag == "Half Coin")
+        {
+            points.coinAmount += 2;
+            Destroy(other.gameObject);
+        }
+
+        else if(other.transform.tag == "Boost")
+        {
+            points.coinAmount += 15;
+        }
+
+        else if(other.transform.tag == "Enemy")
+        {
+            points.coinAmount -= 10;
         }
     }
 

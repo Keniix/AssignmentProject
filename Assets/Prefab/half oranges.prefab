@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: -7512152791955706205}
   - component: {fileID: -1900375009120404898}
   m_Layer: 0
-  m_Name: 'half oranges '
-  m_TagString: Coin
+  m_Name: half oranges
+  m_TagString: Half Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,6 +128,7 @@ MonoBehaviour:
   moveSpeed: 6
   speedIncrement: 0.0002
   maximumSpeed: 10
+  Grass: {fileID: 0}
 --- !u!95 &6068859614077281327
 Animator:
   serializedVersion: 3

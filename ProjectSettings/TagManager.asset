@@ -8,6 +8,10 @@ TagManager:
   - Character
   - Collider
   - Coin
+  - Powerup
+  - Half Coin
+  - Boost
+  - Enemy
   layers:
   - Default
   - TransparentFX
