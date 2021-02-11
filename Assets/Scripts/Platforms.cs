@@ -8,12 +8,15 @@ public class Platforms : MonoBehaviour
     public float moveSpeed = 3f;
     public float speedIncrement = 0.01f;
     public float maximumSpeed = 10f;
+    public AudioClip Grass;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
+
 
     // Update is called once per frame
     void Update()
@@ -34,4 +37,12 @@ public class Platforms : MonoBehaviour
             moveSpeed = maximumSpeed;
         } 
     }
+
+    // void OnTriggerEnter2D(Collider2D other) 
+    // {
+    //     if(other.tag == "Character")
+    //     {
+    //         AudioSource.PlayClipAtPoint(Grass, transform.position, 1);
+    //     }
+    // }
 }

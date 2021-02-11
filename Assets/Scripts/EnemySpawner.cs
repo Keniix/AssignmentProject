@@ -26,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
         {
             nextSpawn = Time.time + spawnRate;
             randX = Random.Range (-20f,20f);
-            randY = Random.Range (-24,-100);
+            randY = Random.Range (-24,-50);
             whereToSpawn = new Vector2 (randX, transform.position.y);
             Instantiate (enemy, whereToSpawn, Quaternion.identity);
             Instantiate(enemy, new Vector3(randX, randY, 0), Quaternion.AngleAxis(180, Vector3.up)); 

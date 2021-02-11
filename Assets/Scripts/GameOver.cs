@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameOver : MonoBehaviour
 {
 
-    public Text scoreText;
+    //public Text scoreText;
 
     //press play again and goes to start game
     public void PlayAgain()

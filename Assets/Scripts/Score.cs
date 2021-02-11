@@ -10,10 +10,12 @@ public class Score : MonoBehaviour
     public Text scoreText;
     public float scoreAmount;
     public float pointIncreasedPerSecond;
+    private GameManager _gameManager;
     // Update is called once per frame
 
     void Start ()
     {
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         scoreAmount =0f;
         pointIncreasedPerSecond=1.5f;
     }
@@ -22,6 +24,11 @@ public class Score : MonoBehaviour
     {
         scoreText.text =scoreAmount.ToString("0");
         scoreAmount +=pointIncreasedPerSecond *Time.deltaTime;
+    }
+
+    public void persistHighScore()
+    {
+        _gameManager.SaveHighScore(scoreAmount);
     }
 
 }

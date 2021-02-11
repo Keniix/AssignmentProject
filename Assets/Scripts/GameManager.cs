@@ -15,4 +15,8 @@ public class GameManager : MonoBehaviour
     {
         
     }
+    public void SaveHighScore(float _highscore)
+    {
+        PersistentData.data._highScore = _highscore;
+    }
 }

@@ -26,12 +26,14 @@ public class Move : MonoBehaviour
     public float moveSpeed = 5f;
     [SerializeField]
     public float _speedMultiplier = 2f;
+    private Score _score;
     // Start is called before the first frame update
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
 
+        _score = GameObject.Find("Canvas").GetComponent<Score>();
 
         characterScale = transform.localScale;
         characterScaleX = characterScale.x;
@@ -112,6 +114,7 @@ public class Move : MonoBehaviour
 
     void Jump()
     {
+        //make character jump
         if (Input.GetButtonDown("Jump"))
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 8f), ForceMode2D.Impulse);
@@ -120,9 +123,15 @@ public class Move : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) 
     {
+        //character dies when touching somethign with the tag collider, call game over scene
         if(other.tag == "Collider")
         {
-            SceneManager.LoadScene(3);
+            if(_score != null)
+            {
+                _score.persistHighScore();
+                SceneManager.LoadScene(3);
+            }
+            
         }
     }
 
