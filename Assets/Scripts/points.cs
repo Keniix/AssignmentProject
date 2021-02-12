@@ -12,6 +12,7 @@ public class points : MonoBehaviour
     void Start()
     {
         text = GetComponent<Text> ();
+        coinAmount = 0;
     }
 
     // Update is called once per frame
